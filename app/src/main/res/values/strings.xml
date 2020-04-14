@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">AKB_Tugas_2</string>
-    
+
     <!--  Text Di Login Activity  -->
     <string name="str_usernamehint_login">Username</string>
     <string name="str_passwordhint_login">Password</string>
@@ -9,7 +9,7 @@
     <string name="str_facebook_login">Connect with facebook</string>
     <string name="str_questionreg_login">doesn\'t have account ?</string>
     <string name="str_register_login">Register</string>
-    
+
     <!--  Text Di Register Activity  -->
     <string name="str_usernamehint_register">Username</string>
     <string name="str_emailhint_register">Email</string>

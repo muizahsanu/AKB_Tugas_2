@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_array">
+        <item>Job</item>
+        <item>Pengangguran</item>
+        <item>Wirausaha</item>
+    </string-array>
+    <string-array name="arr_goldar_register">
+        <item><FONT COLOR="#a3a3a3">Blood Type</FONT></item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="arr_rhesus_register">
+        <item>Rhesus</item>
+        <item>Positive</item>
+        <item>Negative</item>
+    </string-array>
+</resources>
