@@ -9,4 +9,56 @@
     <string name="str_facebook_login">Connect with facebook</string>
     <string name="str_questionreg_login">doesn\'t have account ?</string>
     <string name="str_register_login">Register</string>
+    
+    <!--  Text Di Register Activity  -->
+    <string name="str_usernamehint_register">Username</string>
+    <string name="str_emailhint_register">Email</string>
+    <string name="str_phonehint_register">Phone Number</string>
+    <string name="str_male_register">Male</string>
+    <string name="str_female_register">Female</string>
+    <string name="str_goldar_register">Blood Type</string>
+    <string name="str_goldarA_register">A</string>
+    <string name="str_goldarB_register">B</string>
+    <string name="str_goldarAB_register">AB</string>
+    <string name="str_goldarO_register">O</string>
+    <string name="str_rhesus_register">Rhesus</string>
+    <string name="str_rhesusPositive">Positive</string>
+    <string name="str_reshusNegative">Negative</string>
+    <string name="str_passwordhint_register">Password</string>
+    <string name="str_repasswordhint_register">Retype Password</string>
+    <string name="str_personal_register">Personal</string>
+    <string name="str_organization_register">Organization</string>
+    <string name="str_job_register">Job</string>
+    <string name="str_joblist1_register">Pengangguran</string>
+    <string name="str_address_register">Home Address</string>
+    <string name="str_location_register">Default Location</string>
+    <string name="str_agree_register">Agree with Terms and Conditions</string>
+    <string name="str_btnregister_register">Register</string>
+
+    <!--  Text Di SuccessReg Activity  -->
+    <string name="str_title_successReg">Almost There</string>
+    <string name="str_thankyou_successReg">Thank you registering with us. One more step,
+    you need to check your email to actiove your account</string>
+    <string name="str_btnverify_successReg">Verify</string>
+
+    <!--  Text Di VerifyAccount Activity  -->
+    <string name="str_title_verifyAccount">Verify your Account</string>
+    <string name="str_desc_verifyAccount">We have send verification code to your email</string>
+    <string name="str_enterVerifCode_verifyAccount">enter verification code here…</string>
+    <string name="str_btnsend_verifyAccount">Send</string>
+    <string name="str_questionVerify_verifyAccount">Doesn\'t get the code ?</string>
+    <string name="str_txtbtnResend_verifyAccount">Resend</string>
+
+    <!--  Text Di Home Activity  -->
+    <string name="str_bloodgive_home">Blood Give</string>
+    <string name="str_bloodreceived_home">Blood Received</string>
+    <string name="str_thanks_home">Thanks</string>
+    <string name="str_searchDonor_home">Search Donor</string>
+    <string name="str_searchDonorNearYou_home">Search donor near you</string>
+    <string name="str_bloodNeeded_home">Blood Needed</string>
+    <string name="str_bloodNeededComment_home">4 Users need blood</string>
+    <string name="str_message_home">Message</string>
+    <string name="str_messageComment_home">5 New Message</string>
+    <string name="str_donorHistory">Donor History</string>
+    <string name="str_donorHistoryComment">5 Gives, 2 Received</string>
 </resources>
