@@ -6,13 +6,30 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import android.widget.Spinner
+import android.widget.Toolbar
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        //Memanggil Fungsi Spinner
+        iniSpinners()
 
+        //
+        //setSupportActionBar(toolbar_register)
+
+    }
+
+    fun onRadioButtonClicked(view: View){
+        if(view is RadioButton){
+            val checked = view.isChecked
+        }
+    }
+
+    fun iniSpinners() {
         val jobSpinner: Spinner = findViewById(R.id.job_spinner)
         val goldarSpinner: Spinner = findViewById(R.id.spn_goldar_register)
         val rhesusSpinner: Spinner = findViewById(R.id.spn_rhesus_register)
@@ -36,10 +53,5 @@ class RegisterActivity : AppCompatActivity() {
             rhesusSpinner.adapter = adapter
         }
     }
-
-    fun onRadioButtonClicked(view: View){
-        if(view is RadioButton){
-            val checked = view.isChecked
-        }
-    }
 }
+
