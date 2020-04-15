@@ -258,12 +258,13 @@
             android:textSize="14sp"
             android:checked="true"
             android:paddingStart="16dp"
+            android:paddingEnd="0dp"
             android:button="@drawable/checkbox_custom"
             android:textColor="#a3a3a3">
         </CheckBox>
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_weight="1"
             android:textSize="14sp"
             android:textColor="@drawable/button_text_color_blue"

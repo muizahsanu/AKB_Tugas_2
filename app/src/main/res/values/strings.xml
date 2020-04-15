@@ -37,8 +37,8 @@
 
     <!--  Text Di SuccessReg Activity  -->
     <string name="str_title_successReg">Almost There</string>
-    <string name="str_thankyou_successReg">Thank you registering with us. One more step,
-    you need to check your email to actiove your account</string>
+    <string name="str_thankyou_successReg">Thank you for registering with us. One more \n step,
+    you need to check your email \n to active your account</string>
     <string name="str_btnverify_successReg">Verify</string>
 
     <!--  Text Di VerifyAccount Activity  -->
