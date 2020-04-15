@@ -19,7 +19,9 @@ class RegisterActivity : AppCompatActivity() {
         iniSpinners()
 
         //
-        //setSupportActionBar(toolbar_register)
+        toolbar_register.setNavigationIcon(R.drawable.ic_header_back)
+        toolbar_register.setTitle("Register")
+        setSupportActionBar(toolbar_register)
 
     }
 
