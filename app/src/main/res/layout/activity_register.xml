@@ -273,6 +273,7 @@
             android:textColor="#a3a3a3">
         </CheckBox>
         <Button
+            android:id="@+id/btn_register_register"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_weight="1"
