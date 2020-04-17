@@ -31,7 +31,9 @@
             android:backgroundTint="#dadada"
             android:layout_weight="1"
             android:textSize="14sp"
-            android:hint="@string/str_usernamehint_register">
+            android:hint="@string/str_usernamehint_register"
+            android:singleLine="true"
+            android:imeOptions="actionNext">
         </EditText>
         <EditText
             android:id="@+id/frm_email_register"
@@ -41,7 +43,9 @@
             android:layout_weight="1"
             android:backgroundTint="#dadada"
             android:hint="@string/str_emailhint_register"
-            android:inputType="textEmailAddress">
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:imeOptions="actionNext">
         </EditText>
         <EditText
             android:id="@+id/frm_phone_register"
@@ -51,7 +55,9 @@
             android:textSize="14sp"
             android:backgroundTint="#dadada"
             android:hint="@string/str_phonehint_register"
-            android:inputType="phone">
+            android:inputType="phone"
+            android:singleLine="true"
+            android:imeOptions="actionNext">
         </EditText>
 
         <!--    Radio Button Group Gender    -->
@@ -150,7 +156,9 @@
             android:backgroundTint="#dadada"
             android:textSize="14sp"
             android:hint="@string/str_passwordhint_register"
-            android:inputType="textPassword">
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:imeOptions="actionNext">
         </EditText>
         <EditText
             android:id="@+id/frm_repassword_regsiter"
@@ -160,7 +168,9 @@
             android:backgroundTint="#dadada"
             android:hint="@string/str_repasswordhint_register"
             android:textSize="14sp"
-            android:inputType="textPassword">
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:imeOptions="actionNext">
         </EditText>
 
         <!--    Radio Button Personal, Organization    -->

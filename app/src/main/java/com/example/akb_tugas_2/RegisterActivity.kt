@@ -5,19 +5,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.text.Editable
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_register.*
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
         //Memanggil Fungsi Spinner
         iniSpinners()
-
         //Setting Toolbar
         toolbar_register.setNavigationIcon(R.drawable.ic_header_back)
         toolbar_register.setTitle("Register")
@@ -30,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    // Validasi Form
     private fun validasiForm(){
         val username = frm_username_register.text.toString()
         val email = frm_email_register.text.toString()
@@ -38,8 +40,7 @@ class RegisterActivity : AppCompatActivity() {
         val repas = frm_repassword_regsiter.text.toString()
         val address = frm_address_register.text.toString()
         val location = frm_location_register.text.toString()
-        val spinnerGoldar: Spinner = findViewById(R.id.spn_goldar_register)
-        val goldar = spinnerGoldar.selectedItem.toString()
+        val goldar = spn_goldar_register.selectedItem.toString()
         val rhesus = spn_rhesus_register.selectedItem.toString()
         val job = job_spinner.selectedItem.toString()
 
@@ -88,13 +89,15 @@ class RegisterActivity : AppCompatActivity() {
             return
         }
 
-        val intent = Intent(this,ProfileActivity::class.java)
+        val wibu = spn_goldar_register.selectedItem.toString()
+        val intent = Intent(this,SuccessActivity::class.java)
+        //intent.putExtra("username",username)
+        intent.putExtra("goldar",wibu)
         intent.putExtra("username",username)
-        intent.putExtra("goldar",goldar)
-        val intent2 = Intent(this,SuccessActivity::class.java)
-        startActivity(intent2)
+        startActivity(intent)
     }
 
+    // Function Check box
     fun onCheckboxClicked(view: View) {
         if (view is CheckBox) {
             val checked: Boolean = view.isChecked

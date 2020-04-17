@@ -10,10 +10,10 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val nama = intent.getStringExtra("username")
         val goldar = intent.getStringExtra("goldar")
+        val nama = intent.getStringExtra("username")
 
-        tv_nama_home.setText(nama)
-        tv_bloodtype_home.setText("Blood type : "+goldar)
+        tv_nama_home.text = nama
+        tv_bloodtype_home.text = "Blood Type : "+goldar
     }
 }

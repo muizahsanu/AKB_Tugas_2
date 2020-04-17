@@ -11,8 +11,14 @@ class SuccessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
 
+
+        val goldar = intent.getStringExtra("goldar")
+        val nama = intent.getStringExtra("username")
+
         btn_verify_success.setOnClickListener(){
             val intent = Intent(this,VerifyAcountActivity::class.java)
+            intent.putExtra("username",nama)
+            intent.putExtra("goldar",goldar)
             startActivity(intent)
         }
     }
