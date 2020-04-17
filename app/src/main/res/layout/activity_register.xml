@@ -21,7 +21,10 @@
         android:orientation="vertical"
         android:layout_below="@+id/toolbar_register"
         android:layout_alignParentBottom="true"
-        android:padding="32dp">
+        android:paddingTop="18dp"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        android:paddingBottom="32dp">
 
         <!--    Form Username,Email,Phone Number    -->
         <EditText
