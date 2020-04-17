@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VerifyAcountActivity"></activity>
-        <activity android:name=".SuccessActivity">
-        </activity>
-        <activity android:name=".RegisterActivity"
-            android:parentActivityName=".Login_Activity">
-        </activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".VerifyAcountActivity" />
+        <activity android:name=".SuccessActivity"></activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".Login_Activity"></activity>
         <activity android:name=".Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

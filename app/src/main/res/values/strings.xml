@@ -50,6 +50,7 @@
     <string name="str_txtbtnResend_verifyAccount">Resend</string>
 
     <!--  Text Di Home Activity  -->
+    <string name="str_bloodtype_home">Blood Type : </string>
     <string name="str_bloodgive_home">Blood Give</string>
     <string name="str_bloodreceived_home">Blood Received</string>
     <string name="str_thanks_home">Thanks</string>

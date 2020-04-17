@@ -23,52 +23,90 @@ class RegisterActivity : AppCompatActivity() {
         toolbar_register.setTitle("Register")
         setSupportActionBar(toolbar_register)
 
-        //Validasi Form
+        //Saat user menekan button register
         btn_register_register.setOnClickListener(){
-            val username = frm_username_register.text.toString()
-            val email = frm_email_register.text.toString()
-            val phone = frm_phone_register.text.toString()
-            val pass = frm_password_register.text.toString()
-            val repas = frm_repassword_regsiter.text.toString()
-            val address = frm_address_register.text.toString()
-            val location = frm_location_register.text.toString()
-            val spinnerGoldar: Spinner = findViewById(R.id.spn_goldar_register)
-            val goldar = spinnerGoldar.selectedItem.toString()
+            //Memanggil validasi form
+            validasiForm()
+        }
+    }
 
-            if(username.isEmpty()){
-                frm_username_register.hasFocus()
-                frm_username_register.setError("Username tidak boleh kosong")
-            }
-            else if(email.isEmpty()){
-                frm_email_register.hasFocus()
-                frm_email_register.setError("Email tidak boleh kosong")
-            }
-            else if(phone.isEmpty()){
-                frm_email_register.hasFocus()
-                frm_email_register.setError("No Telepon harus diisi")
-            }
-            else if(pass.isEmpty()){
-                frm_email_register.hasFocus()
-                frm_email_register.setError("Password tidak boleh kosong")
-            }
-            else if(address.isEmpty()){
-                frm_email_register.hasFocus()
-                frm_email_register.setError("Address tidak boleh kosong")
-            }
-            else if(location.isEmpty()){
-                frm_email_register.hasFocus()
-                frm_email_register.setError("Location tidak boleh kosong")
-            }
-            else if(repas != pass){
-                frm_email_register.hasFocus()
-                frm_email_register.setError("Password doesn't match")
-            }
-            else{
-                val intent = Intent(this,SuccessActivity::class.java)
-                intent.putExtra("username",username)
-                intent.putExtra("goldar",goldar)
-                val intent2 = Intent(this,SuccessActivity::class.java)
-                startActivity(intent2)
+    private fun validasiForm(){
+        val username = frm_username_register.text.toString()
+        val email = frm_email_register.text.toString()
+        val phone = frm_phone_register.text.toString()
+        val pass = frm_password_register.text.toString()
+        val repas = frm_repassword_regsiter.text.toString()
+        val address = frm_address_register.text.toString()
+        val location = frm_location_register.text.toString()
+        val spinnerGoldar: Spinner = findViewById(R.id.spn_goldar_register)
+        val goldar = spinnerGoldar.selectedItem.toString()
+        val rhesus = spn_rhesus_register.selectedItem.toString()
+        val job = job_spinner.selectedItem.toString()
+
+        if(username.isEmpty()){
+            frm_username_register.setError("Username tidak boleh kosong")
+            return
+        }
+        if(email.isEmpty()){
+            frm_email_register.setError("Email tidak boleh kosong")
+            return
+        }
+        if(phone.isEmpty()){
+            frm_phone_register.setError("No Telepon harus diisi")
+            return
+        }
+        if(goldar == "Blood Type"){
+            val asd = spn_goldar_register.selectedView
+            val errorTextView : TextView = asd as TextView
+            errorTextView.setError("Pilih golongan darah")
+            return
+        }
+        if(rhesus == "Rhesus"){
+            val errorTextView : TextView = spn_rhesus_register.selectedView as TextView
+            errorTextView.setError("Pilih rhesus")
+            return
+        }
+        if(pass.isEmpty()){
+            frm_password_register.setError("Password tidak boleh kosong")
+            return
+        }
+        if(repas != pass){
+            frm_repassword_regsiter.setError("Password doesn't match")
+            return
+        }
+        if(job == "Job"){
+            val errorTextView : TextView = job_spinner.selectedView as TextView
+            errorTextView.setError("Pilih  job")
+            return
+        }
+        if(address.isEmpty()){
+            frm_address_register.setError("Address tidak boleh kosong")
+            return
+        }
+        if(location.isEmpty()){
+            frm_location_register.setError("Location tidak boleh kosong")
+            return
+        }
+
+        val intent = Intent(this,ProfileActivity::class.java)
+        intent.putExtra("username",username)
+        intent.putExtra("goldar",goldar)
+        val intent2 = Intent(this,SuccessActivity::class.java)
+        startActivity(intent2)
+    }
+
+    fun onCheckboxClicked(view: View) {
+        if (view is CheckBox) {
+            val checked: Boolean = view.isChecked
+
+            when (view.id) {
+                R.id.cb_terms_register -> {
+                    if (checked) {
+                        btn_register_register.isClickable = true
+                    } else {
+                        btn_register_register.isClickable = false
+                    }
+                }
             }
         }
     }

@@ -40,7 +40,8 @@
             android:textSize="14sp"
             android:layout_weight="1"
             android:backgroundTint="#dadada"
-            android:hint="@string/str_emailhint_register">
+            android:hint="@string/str_emailhint_register"
+            android:inputType="textEmailAddress">
         </EditText>
         <EditText
             android:id="@+id/frm_phone_register"
@@ -49,7 +50,8 @@
             android:layout_weight="1"
             android:textSize="14sp"
             android:backgroundTint="#dadada"
-            android:hint="@string/str_phonehint_register">
+            android:hint="@string/str_phonehint_register"
+            android:inputType="phone">
         </EditText>
 
         <!--    Radio Button Group Gender    -->
@@ -97,6 +99,7 @@
             android:paddingStart="4dp"
             android:paddingEnd="4dp"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:layout_weight="1">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -109,20 +112,12 @@
                     android:id="@+id/spn_goldar_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:layout_centerVertical="true"
                     android:spinnerMode="dropdown"
                     android:paddingEnd="32dp"
                     android:paddingStart="0dp"
                     android:textSize="14sp">
                 </Spinner>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_register_dropdown" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -136,20 +131,12 @@
                     android:id="@+id/spn_rhesus_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:spinnerMode="dropdown"
                     android:layout_centerVertical="true"
                     android:paddingEnd="32dp"
                     android:paddingStart="0dp"
                     android:textSize="16sp">
                 </Spinner>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_register_dropdown" />
             </RelativeLayout>
 
         </LinearLayout>
@@ -162,7 +149,8 @@
             android:layout_weight="1"
             android:backgroundTint="#dadada"
             android:textSize="14sp"
-            android:hint="@string/str_passwordhint_register">
+            android:hint="@string/str_passwordhint_register"
+            android:inputType="textPassword">
         </EditText>
         <EditText
             android:id="@+id/frm_repassword_regsiter"
@@ -171,7 +159,8 @@
             android:layout_weight="1"
             android:backgroundTint="#dadada"
             android:hint="@string/str_repasswordhint_register"
-            android:textSize="14sp">
+            android:textSize="14sp"
+            android:inputType="textPassword">
         </EditText>
 
         <!--    Radio Button Personal, Organization    -->
@@ -223,20 +212,12 @@
                 android:id="@+id/job_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:spinnerMode="dropdown"
                 android:paddingEnd="32dp"
                 android:paddingStart="0dp"
                 android:textSize="14sp">
             </Spinner>
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_register_dropdown" />
         </RelativeLayout>
 
         <EditText
@@ -259,6 +240,7 @@
             android:drawableEnd="@drawable/ic_blood_needed_location">
         </EditText>
         <CheckBox
+            android:id="@+id/cb_terms_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
@@ -270,7 +252,8 @@
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
             android:button="@drawable/checkbox_custom"
-            android:textColor="#a3a3a3">
+            android:textColor="#a3a3a3"
+            android:onClick="onCheckboxClicked">
         </CheckBox>
         <Button
             android:id="@+id/btn_register_register"
